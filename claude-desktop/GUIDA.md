@@ -119,7 +119,7 @@ Già nel tuo account come `impeccable`. Complementare a Taste: Taste costruisce,
 Non pubblica nulla.
 
 **Claude Desktop:** stesso percorso del plugin LinkedIn con `Jakeschincariol/youtube-agent-skill`.
-**Claude Code:** `/plugin marketplace add Jakeschincariol/youtube-agent-skill` → `/plugin install youtube-agent`.
+**Claude Code:** `/plugin marketplace add Jakeschincariol/youtube-agent-skill` → `/plugin install youtube-agent@youtube-agent-skill`.
 
 Primo passo obbligato: compila `templates/voice.md` (o manda a Claude 3 tuoi video e chiedi
 "scrivi il mio voice.md"). Tutte le skill lo leggono.
