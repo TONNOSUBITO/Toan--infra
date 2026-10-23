@@ -54,7 +54,8 @@ cd rizzo-flow
 uv sync --locked
 uv run rizzo devices          # vedi quale GPU/CPU userà
 uv run rizzo download         # runtime llama.cpp + modello 4B (~4.4 GB)
-                              # PC debole: uv run rizzo download --size 1.7b (meno accurato)
+                              # PC debole / GPU integrata: --quant q4_k_m (2.6 GB, stessa
+                              # accuratezza della Q8_0 sul benchmark); il 1.7B è peggiore (0.544 vs 0.650)
 uv run rizzo serve            # → http://127.0.0.1:8017/playground
 ```
 
