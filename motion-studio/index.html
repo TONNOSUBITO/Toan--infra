@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- Demo minima per verificare la pipeline: node render.mjs --dur 3 -->
+<html>
+<head><meta charset="utf-8"><style>html,body{margin:0;background:#F2EFE9}canvas{display:block}</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script type="module">
+  import { spring, track } from './lib/motion.js';
+  const c = document.getElementById('c'), g = c.getContext('2d');
+  window.seek = (t) => {
+    g.fillStyle = '#F2EFE9'; g.fillRect(0, 0, c.width, c.height);
+    const x = track(t, [[0, 140], [0.4, 540], [1.4, 940], [2.2, 540]]);
+    const r = 40 + 120 * spring(t - 0.4);
+    g.fillStyle = '#E5432D'; g.beginPath(); g.arc(x, 960, r, 0, Math.PI * 2); g.fill();
+    g.fillStyle = '#15140F'; g.font = '700 96px sans-serif'; g.textAlign = 'center';
+    g.globalAlpha = Math.min(1, spring(t - 1.6)); g.fillText('motion studio', 540, 1300); g.globalAlpha = 1;
+  };
+  window.seek(0);
+</script>
+</body>
+</html>

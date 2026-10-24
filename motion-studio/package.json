@@ -1,0 +1,11 @@
+{
+  "name": "motion-studio",
+  "private": true,
+  "scripts": {
+    "render": "node render.mjs",
+    "test-render": "node render.mjs --fps 30 --dur 3 --sub 2"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}
