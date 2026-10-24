@@ -4,7 +4,8 @@
 - Every film is a pure function of time: window.seek(t) paints frame t on a canvas with id="c".
 - No CSS transitions, no setTimeout, no requestAnimationFrame in render mode,
   no state carried between frames. Seeded noise only, never Math.random.
-- Render with node render.mjs. Encode H.264 yuv420p, CRF 16.
+- Render with node render.mjs --fps 60 --dur N --sub 4 (add --w 1920 --h 1080 for 16:9; default is 1080x1920).
+  Encode H.264 yuv420p, CRF 16.
 - Springs from lib/motion.js, not easing curves. Any value with more than one target uses track().
 
 ## Look
